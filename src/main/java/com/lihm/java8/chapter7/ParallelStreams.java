@@ -34,7 +34,8 @@ public class ParallelStreams {
         }
         return result; }
 
-    public static long measureSumPerf(Function<Long, Long> adder, long n) { long fastest = Long.MAX_VALUE;
+    public static long measureSumPerf(Function<Long, Long> adder, long n) {
+        long fastest = Long.MAX_VALUE;
         for (int i = 0; i < 10; i++) {
             long start = System.nanoTime();
             long sum = adder.apply(n);
